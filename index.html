@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Google Fonts -->
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js" defer></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    
+</head>
+<body>
+
+    <main class="main">
+        <article class="container">
+
+            <header class="header">
+
+                <div class="header-content">
+                    <h1 class="h1 header-title">My Daily Tasks</h1>
+
+                    <p class="header-time" data-header-time>
+                        <span class="month">Month</span>,
+                        <span class="day">Day</span>
+                        <span class="day-num">00</span>
+                        <span class="year">0000</span>
+                      </p>
+                </div>
+
+                <div class="theme-container" data-theme-container>
+                    <div class="theme-top">
+                        <h1 class="h1 header-title">My Daily Tasks</h1>                      
+
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </div>
+
+                    <h2 class="h2">Choose Theme</h2> 
+
+                    <div class="theme-list">
+
+                        <div onclick="changeBodyBackgroundColor(this)" class="theme-item" style="background: #f8d700cb"></div>
+
+                        <div onclick="changeBodyBackgroundColor(this)" class="theme-item" style="background: #d939cd" ></div>
+
+                        <div onclick="changeBodyBackgroundColor(this)" class="theme-item" style="background: #f05f57" ></div>
+
+                        <div onclick="changeBodyBackgroundColor(this)" class="theme-item" style="background: #2f81edc6" ></div>
+
+                        <div onclick="changeBodyBackgroundColor(this)" class="theme-item" style="background: #85ffbd" ></div>
+
+                        <div onclick="changeBodyBackgroundColor(this)" class="theme-item" style="background: #8bc6ec" ></div>
+
+                        <div onclick="changeBodyBackgroundColor(this)" class="theme-item" style="background: #fbab7e" ></div>
+                      
+                    </div>
+                </div>
+
+                <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+    
+                <div class="overlay" data-overlay></div>
+
+            </header>
+
+            <div class="text-wrapper" data-text>
+                <h2 class="h2">
+                    Never Miss a <br> Task Again
+                </h2>
+            </div>
+
+            <div class="input-wrapper" title="Add a task in 'My Day'">
+
+                <div class="input-position">
+                    <input type="text" name="task" maxlength="100" placeholder="Type task here" class="input-field" data-task-input>
+                    <button class="add" data-add-btn>Add</button>
+                    <span class="input-text">Add a task</span>
+
+                    <div class="input-icon">
+                        <ion-icon class="add-icon" name="add-sharp"></ion-icon>
+                        <ion-icon class="play-icon" name="caret-forward-sharp"></ion-icon>
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="task-list" data-task-list></ul>
+
+        </article>
+    </main>
+    
+</body>
+</html>
